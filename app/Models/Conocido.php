@@ -14,6 +14,6 @@ class Conocido extends Authenticatable
     //muchos a muchos con Contactos
     public function contactos()
     {
-        return $this->hasMany(Contacto::class, 'conocido_id', 'id');
+        return $this->hasMany('App\Models\Conocido');
     }
 }

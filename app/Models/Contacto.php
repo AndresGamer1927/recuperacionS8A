@@ -13,6 +13,6 @@ class Contacto extends Authenticatable
     //mucho a muchos Conocidos
     public function Conocidos()
     {
-        return $this->belongsToMany(Conocido::class);
+        return $this->belongsToMany('App\Models\Contacto');
     }
 }

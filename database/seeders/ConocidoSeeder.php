@@ -21,12 +21,12 @@ class ConocidoSeeder extends Seeder
         $conocido->save();
 
         $conocido->nombre = 'Witron';
-        $conocido->nombre_usuario = 'witron19';
+        $conocido->usuario = 'witron19';
         $conocido->clave = bcrypt('witron123');
         $conocido->save();
 
         $conocido->nombre = 'Raul';
-        $conocido->nombre_usuario = 'raul27';
+        $conocido->usuario = 'raul27';
         $conocido->clave = bcrypt('raul123');
         $conocido->save();
     }
