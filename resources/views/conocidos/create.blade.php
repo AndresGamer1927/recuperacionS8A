@@ -4,7 +4,7 @@
     errores
 @endif
 
-<form action="{{route('gerentes.store')}}" method="post" enctype="multipart/form-data">
+<form action="{{route('conocidos.store')}}" method="post" enctype="multipart/form-data">
     @csrf
     
     @error('nombre')
@@ -17,7 +17,7 @@
         **
     @enderror
     <label for='NombreDeUsuario'>Nombre de Usuario</label>
-    <input type='text' name='nombre_de_usuario' id='NombreDeUsuario' value={{old('nombre_usuario')}}>
+    <input type='text' name='usuario' id='NombreDeUsuario' value={{old('usuario')}}>
     
     <label for='clave'>Clave del usuario</label>
     <input type='password' name='clave' id='clave'>
@@ -28,8 +28,7 @@
     <label for='pwd'>Repita la clave</label>
     <input type='password' name='clave_confirmation' id='pwd'>
     
-    <label for='imagen'>Imagen</label>
-    <input type='file' name='imagen' id='imagen'>
+
     
     <br>
     <input type="submit" value="GUARDAR">

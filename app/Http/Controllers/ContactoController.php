@@ -21,7 +21,6 @@ class ContactoController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**

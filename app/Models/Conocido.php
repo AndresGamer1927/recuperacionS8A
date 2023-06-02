@@ -9,4 +9,11 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class Conocido extends Authenticatable
 {
     use HasFactory;
+    protected $fillable = ['nombre', 'usuario', 'clave'];
+
+    //muchos a muchos con Contactos
+    public function contactos()
+    {
+        return $this->hasMany(Contacto::class, 'conocido_id', 'id');
+    }
 }

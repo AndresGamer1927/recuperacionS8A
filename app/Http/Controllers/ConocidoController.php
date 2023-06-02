@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Conocido;
 use App\Http\Requests\StoreConocidoRequest;
 use App\Http\Requests\UpdateConocidoRequest;
+use Illuminate\Support\Facades\Hash;
 
 class ConocidoController extends Controller
 {
@@ -13,7 +14,8 @@ class ConocidoController extends Controller
      */
     public function index()
     {
-        //
+        $todos = Conocido::all();
+        return view("conocidos.index", compact('todos'));
     }
 
     /**
@@ -21,7 +23,7 @@ class ConocidoController extends Controller
      */
     public function create()
     {
-        //
+        return view("conocidos.create");
     }
 
     /**
@@ -29,7 +31,12 @@ class ConocidoController extends Controller
      */
     public function store(StoreConocidoRequest $request)
     {
-        //
+        $nuevo = new Conocido();
+        $nuevo->fill($request->all());
+        $nuevo->clave = Hash::make($request->input('clave'));
+        $nuevo->save();
+
+        return redirect(route('ropciones'));
     }
 
     /**
@@ -45,7 +52,7 @@ class ConocidoController extends Controller
      */
     public function edit(Conocido $conocido)
     {
-        //
+        return view('conocidos.edit', compact('conocido'));
     }
 
     /**
@@ -53,7 +60,10 @@ class ConocidoController extends Controller
      */
     public function update(UpdateConocidoRequest $request, Conocido $conocido)
     {
-        //
+        $conocido->fill($request->input('nombre'));
+        $conocido->save();
+
+        return redirect(route('conocidos.index'));
     }
 
     /**
@@ -61,6 +71,8 @@ class ConocidoController extends Controller
      */
     public function destroy(Conocido $conocido)
     {
-        //
+        $conocido->delete();
+
+        return redirect(route('docentes.index'));
     }
 }

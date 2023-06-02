@@ -9,4 +9,10 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class Contacto extends Authenticatable
 {
     use HasFactory;
+
+    //mucho a muchos Conocidos
+    public function Conocidos()
+    {
+        return $this->belongsToMany(Conocido::class);
+    }
 }
