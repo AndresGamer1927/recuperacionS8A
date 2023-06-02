@@ -23,11 +23,11 @@ Route::get('/', function () {
 Route::post('validar', [SistemaController::class, 'validar'])->name('validar')->middleware("web");
 Route::get('ropciones', [SistemaController::class, 'nopciones'])->name('mopciones');
 
-Route::get('conocidos', [PaqueteController::class, 'index'])->name('conocidos.index');
-Route::get('crearconocidos', [PaqueteController::class, 'create'])->name('conocidos.create');
-Route::post('guardar', [PaqueteController::class, 'store'])->name('paquetes.store');
-Route::get('actualizar/{cual?}', [PaqueteController::class, 'edit'])->name('conocidos.edit');
-Route::put('actualizar/{cual?}', [PaqueteController::class, 'update'])->name('conocidos.update');
-Route::delete('borrar/{cual?}', [PaqueteController::class, 'destroy'])->name('conocidos.destroy');
+Route::get('conocidos', [ConocidoController::class, 'index'])->name('conocidos.index');
+Route::get('crearconocidos', [ConocidoController::class, 'create'])->name('conocidos.create');
+Route::post('guardar', [ConocidoController::class, 'store'])->name('paquetes.store');
+Route::get('actualizar/{cual?}', [ConocidoController::class, 'edit'])->name('conocidos.edit');
+Route::put('actualizar/{cual?}', [ConocidoController::class, 'update'])->name('conocidos.update');
+Route::delete('borrar/{cual?}', [ConocidoController::class, 'destroy'])->name('conocidos.destroy');
 
-Route::resource('conocidos', ConocidoController::class);
+Route::resource('conocidos', ContactoController::class);
