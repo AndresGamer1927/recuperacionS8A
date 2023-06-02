@@ -15,9 +15,8 @@
             <tr>
                 <td>{{$uno->id}}</td>
                 <td>{{$uno->nombre}}</td>
-                <td>{{$uno->apellido}}</td>
                 <td>{{$uno->usuario}}</td>
-                <td>{{$uno->correo}}</td>
+                <td>{{$uno->clave}}</td>
                 {{--<td><img src="{{asset("imagenes/$uno->imagen")}}" alt=""></td> --}}
                 <td>
                     {{-- <a href="{{route('gerente.experiencias.index',$uno->id)}}">EXPERIENCIA</a> --}}

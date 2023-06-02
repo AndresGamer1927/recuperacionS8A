@@ -13,21 +13,21 @@ class ConocidoSeeder extends Seeder
      */
     public function run(): void
     {
-        $gerente = new Conocido();
+        $conocido = new Conocido();
         //Seeders de Conocidos de la base de datos
-        $gerente->nombre = 'Andres';
-        $gerente->usuario = 'AndresGamer';
-        $gerente->clave = bcrypt('andres123');
-        $gerente->save();
+        $conocido->nombre = 'Andres';
+        $conocido->usuario = 'AndresGamer';
+        $conocido->clave = bcrypt('andres123');
+        $conocido->save();
 
-        $gerente->nombre = 'Witron';
-        $gerente->nombre_usuario = 'witron19';
-        $gerente->clave = bcrypt('witron123');
-        $gerente->save();
+        $conocido->nombre = 'Witron';
+        $conocido->nombre_usuario = 'witron19';
+        $conocido->clave = bcrypt('witron123');
+        $conocido->save();
 
-        $gerente->nombre = 'Raul';
-        $gerente->nombre_usuario = 'raul27';
-        $gerente->clave = bcrypt('raul123');
-        $gerente->save();
+        $conocido->nombre = 'Raul';
+        $conocido->nombre_usuario = 'raul27';
+        $conocido->clave = bcrypt('raul123');
+        $conocido->save();
     }
 }
