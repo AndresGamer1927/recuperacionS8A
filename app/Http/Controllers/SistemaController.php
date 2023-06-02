@@ -22,7 +22,7 @@ class SistemaController extends Controller
             if ($conincide) {
                 Auth::guard('webd')->login($encontrado);
                 $_SESSION['AuthGuard'] = 'webd';
-                return redirect('/inicio');
+                return redirect('conocidos.index');
             }
         }
     }

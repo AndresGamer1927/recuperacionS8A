@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 Route::post('validar', [SistemaController::class, 'validar'])->name('validar')->middleware("web");
-Route::get('ropciones', [SistemaController::class, 'nopciones'])->name('mopciones');
+Route::get('ropciones', [SistemaController::class, 'ropciones'])->name('ropciones');
 
 Route::get('conocidos', [ConocidoController::class, 'index'])->name('conocidos.index');
 Route::get('crearconocidos', [ConocidoController::class, 'create'])->name('conocidos.create');
