@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SistemaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('inicio');
 });
+
+Route::post('validar', [SistemaController::class, 'validar'])->name('validar')->middleware("web");
+Route::get('/inicio', [SistemaController::class, 'nopciones'])->name('mopciones');
