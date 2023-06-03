@@ -1,4 +1,4 @@
-@section('contenido')
+
     Lista de Gerentes<br>
     
     <table border="1">
@@ -36,4 +36,3 @@
 
     </table>
 
-@endsection

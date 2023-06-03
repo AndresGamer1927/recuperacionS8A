@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'webd' => [
+            'driver' => 'session',
+            'provider' => 'conocidos',
+        ],
     ],
 
     /*
@@ -63,6 +67,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'conocidos' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Conocido::class,
         ],
 
         // 'users' => [

@@ -1,4 +1,4 @@
-@section('contenido')
+
     Conocidos<br>
     
     <table border="1">
@@ -35,6 +35,3 @@
         </tbody>
 
     </table>
-
-
-@endsection

@@ -28,9 +28,10 @@
           
               <!-- Login Form -->
               <form action="{{route('validar')}}" method="post">
-                <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-                <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-                <input type="submit" class="fadeIn fourth" value="Log In">
+                @csrf
+                <input type="text" id="login" class="fadeIn second" name="usuario" placeholder="login">
+                <input type="text" id="password" class="fadeIn third" name="clave" placeholder="password">
+                <input type="submit" class="fadeIn fourth" value="ingresar">
               </form>
           
               <a href="{{route('conocidos.create')}}">Registrarse</a>

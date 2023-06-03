@@ -12,7 +12,7 @@ class SistemaController extends Controller
     public function validar(Request $solicitud)
     {
         $usuario = $solicitud->input('usuario');
-        $password = $solicitud->input('password');
+        $password = $solicitud->input('clave');
         $encontrado = Conocido::where('usuario', $usuario)->first();
         if (is_null($encontrado)) {
             echo 'No se encontrado';
@@ -22,7 +22,7 @@ class SistemaController extends Controller
             if ($conincide) {
                 Auth::guard('webd')->login($encontrado);
                 $_SESSION['AuthGuard'] = 'webd';
-                return redirect('conocidos.index');
+                return redirect(route('conocidos.index'));
             }
         }
     }

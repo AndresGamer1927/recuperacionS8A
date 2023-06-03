@@ -20,14 +20,9 @@ Route::get('/', function () {
     return view('inicio');
 });
 
-Route::post('validar', [SistemaController::class, 'validar'])->name('validar')->middleware("web");
+Route::post('validar', [SistemaController::class, 'validar'])->name('validar');
 Route::get('ropciones', [SistemaController::class, 'ropciones'])->name('ropciones');
 
-Route::get('conocidos', [ConocidoController::class, 'index'])->name('conocidos.index');
-Route::get('crearconocidos', [ConocidoController::class, 'create'])->name('conocidos.create');
-Route::post('guardar', [ConocidoController::class, 'store'])->name('paquetes.store');
-Route::get('actualizar/{cual?}', [ConocidoController::class, 'edit'])->name('conocidos.edit');
-Route::put('actualizar/{cual?}', [ConocidoController::class, 'update'])->name('conocidos.update');
-Route::delete('borrar/{cual?}', [ConocidoController::class, 'destroy'])->name('conocidos.destroy');
+Route::resource('conocidos', ConocidoController::class);
 
-Route::resource('conocidos', ContactoController::class);
+Route::resource('contactos', ContactoController::class);

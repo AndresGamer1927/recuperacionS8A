@@ -19,11 +19,13 @@ class ConocidoSeeder extends Seeder
         $conocido->usuario = 'AndresGamer';
         $conocido->clave = bcrypt('andres123');
         $conocido->save();
+        $conocido = new Conocido();
 
         $conocido->nombre = 'Witron';
         $conocido->usuario = 'witron19';
         $conocido->clave = bcrypt('witron123');
         $conocido->save();
+        $conocido = new Conocido();
 
         $conocido->nombre = 'Raul';
         $conocido->usuario = 'raul27';

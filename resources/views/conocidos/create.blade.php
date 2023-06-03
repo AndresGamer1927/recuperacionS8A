@@ -1,4 +1,3 @@
-@section('contenido')
 
 @if ($errors->any())
     errores
@@ -34,5 +33,3 @@
     <input type="submit" value="GUARDAR">
 </form>
 
-
-@endsection

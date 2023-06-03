@@ -1,4 +1,4 @@
-@section('contenido')
+
 
 
 <form action="{{route('docentes.update', $docente->id)}}" method="post">
@@ -12,5 +12,3 @@
     <input type="submit" value="ACTUALIZAR">
 </form>
 
-
-@endsection
